@@ -1,0 +1,9 @@
+@mixin width ( $value: auto, $rate: 1 )
+{
+	width: $value * $rate;
+}
+
+@mixin height ( $value: auto, $rate: 1 )
+{
+	height: $value * $rate;
+}

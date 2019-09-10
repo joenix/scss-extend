@@ -1,0 +1,33 @@
+@mixin fruit ( $direct: left, $distance: rem( 200 ), $crevice: $unit )
+{
+	& > .fruit-head
+	{
+		@if ( $direct == left )
+		{
+			@include float-left;
+		}
+
+		@if ( $direct == right )
+		{
+			@include float-right;
+		}
+
+		@include width( $distance );
+	}
+
+	& > .fruit-body
+	{
+		margin-#{$direct}: $distance;
+		padding-#{$direct}: $crevice;
+	}
+}
+
+@mixin fruit-left ( $distance: rem( 200 ), $crevice: $unit )
+{
+	@include fruit( left, $distance, $crevice );
+}
+
+@mixin fruit-right ( $distance: rem( 200 ), $crevice: $unit )
+{
+	@include fruit( right, $distance, $crevice );
+}

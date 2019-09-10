@@ -1,0 +1,14 @@
+.plank
+{
+	@include padding-vertical( $unit );
+
+	& > .board
+	{
+		@include margin-horizontal( $unit );
+
+		&:not(:first-child)
+		{
+			margin-top: $unit;
+		}
+	}
+}

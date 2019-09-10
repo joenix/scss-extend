@@ -1,0 +1,17 @@
+@mixin float ( $value: none )
+{
+	float: $value;
+}
+
+@mixin float-none
+{
+	@include float;
+}
+@mixin float-left
+{
+	@include float( left );
+}
+@mixin float-right
+{
+	@include float( right );
+}

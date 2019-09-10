@@ -1,0 +1,46 @@
+@import '../index.scss';
+
+
+/* !!
+ * Demo Sheet
+ * ===== ===== =====
+ */
+html
+{
+	@include chess( 1rem, #eee );
+}
+
+.space
+{
+	width: $space * 3;
+
+	@include gradient-linear( $DarkOrange, $Crimson, left );
+}
+
+
+@mixin render ( $color, $tax )
+{
+	&:after
+	{
+		content: ' ' + tink( $color, $tax );
+	}
+
+	background-color: tink( $color, $tax );
+
+	font-size: rem( 24 );
+	padding: rem(10) rem(20);
+}
+
+
+$color: #3366ff;
+
+.tink1  { @include render( $color,  5 ); }
+.tink2  { @include render( $color,  4 ); }
+.tink3  { @include render( $color,  3 ); }
+.tink4  { @include render( $color,  2 ); }
+.tink5  { @include render( $color,  1 ); }
+.tink6  { @include render( $color,  0 ); }
+.tink7  { @include render( $color, -1 ); }
+.tink8  { @include render( $color, -2 ); }
+.tink9  { @include render( $color, -3 ); }
+.tink10 { @include render( $color, -4 ); }

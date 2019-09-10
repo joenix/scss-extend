@@ -1,0 +1,14 @@
+/* !!
+ * Tink Sass: Code By Joenix
+ * ===== ===== =====
+ */
+
+@function calculateHSL ( $color, $tax, $saturation, $lightness )
+{
+	@return hsl( hue( $color ), saturation( $color ) + $tax * $saturation, lightness( $color ) + $tax * $lightness );
+}
+
+@function tink ( $color, $tax, $tolerance: 4 )
+{
+	@return calculateHSL( $color, $tax, $tolerance * 3, $tolerance * 2 );
+}

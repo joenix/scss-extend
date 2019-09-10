@@ -1,0 +1,14 @@
+.fruit
+{
+	@include fruit-left;
+}
+
+.fruit-left
+{
+	@include fruit-left;
+}
+
+.fruit-right
+{
+	@include fruit-right;
+}
